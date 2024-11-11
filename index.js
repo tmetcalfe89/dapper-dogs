@@ -1,10 +1,13 @@
 import { addSlide, clear, start } from "./carousel.js";
 import { getDogs, getLikes, like } from "./dogs.js";
+import { closeModal } from "./modal.js";
+import { setUser } from "./user.js";
 
 async function run() {
   $(".carousel-control-favorite").on("click", likeDog);
   $(".carousel-control-see-favorites").on("click", seeLikedDogs);
   $(".carousel-control-roll").on("click", getRandomDogs);
+  $(".confirm-login").on("click", login);
 
   await getRandomDogs();
 }
@@ -15,8 +18,8 @@ async function likeDog() {
 }
 
 async function seeLikedDogs() {
-  clear();
   const likedDogs = await getLikes();
+  clear();
   for (const dog of likedDogs) {
     addSlide(dog.url, dog.id);
   }
@@ -30,6 +33,12 @@ async function getRandomDogs() {
     addSlide(dog.url, dog.id);
   }
   start();
+}
+
+function login() {
+  const username = $(".username").val();
+  setUser(username);
+  closeModal();
 }
 
 run();
