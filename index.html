@@ -77,6 +77,56 @@
           data-target="#loginModal"
           >👤</a
         >
+        <a
+          class="carousel-control-login carousel-action"
+          href="#carousel"
+          role="button"
+          data-toggle="modal"
+          data-target="#infoModal"
+          >🛈</a
+        >
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="infoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="infoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalLabel">Info</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            This app was part of my App-A-Day challenge, started on November 10,
+            2024. Check out
+            <a href="https://github.com/tmetcalfe89/dapper-dogs"
+              >the GitHub page</a
+            >
+            for more info.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -104,10 +154,7 @@
           <div class="modal-body">
             <div class="form-group">
               <label for="exampleFormControlInput1">Username</label>
-              <input
-                type="email"
-                class="form-control username"
-              />
+              <input type="email" class="form-control username" />
             </div>
           </div>
           <div class="modal-footer">
@@ -118,7 +165,9 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary confirm-login">Log In</button>
+            <button type="button" class="btn btn-primary confirm-login">
+              Log In
+            </button>
           </div>
         </div>
       </div>
