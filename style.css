@@ -1,0 +1,28 @@
+body {
+  background-color: black;
+}
+
+.carousel-item {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel-actions {
+  position: fixed;
+  bottom: 5px;
+  font-size: 2rem;
+  padding: 5px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+}
+
+.carousel-action {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.carousel-action:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
